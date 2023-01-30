@@ -11,13 +11,14 @@ function CreatePost() {
 
   }
   const handleChange = (e) => {
-
+    setForm({ ...form, [e.target.name]: e.target.value })
   }
   const handleSurpriseMe = async () => {
-
+    const randomPrompt = getRandomPrompt(form.prompt);
+    setForm({ ...form, prompt: randomPrompt });
   }
   const generateImage = () => {
-    
+
   }
   const navigate = useNavigate();
   const [form, setForm] = useState({ name: '', prompt: '', photo: '' });
@@ -74,7 +75,7 @@ function CreatePost() {
               </div>
             )}
           </div>
-          
+
         </div>
 
         <div className="mt-5 flex gap-5">
