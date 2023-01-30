@@ -3,8 +3,8 @@ import * as dotenv from 'dotenv'        // we use .env for storing passwords and
 import cors from 'cors'                 // for security purpose browser block cross-origin resource sharing, so to enable it
 
 import connectDB from './mongodb/connect.js';
-import postRoutes from './routes/postRoutes';
-import dalleRoutes from './routes/dalleRoutes';
+import postRoutes from './routes/postRoutes.js';
+import dalleRoutes from './routes/dalleRoutes.js';
 
 dotenv.config();
 
