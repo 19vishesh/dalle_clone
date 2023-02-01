@@ -7,7 +7,7 @@ import { FormField, Loader } from '../components'
 
 function CreatePost() {
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();   // ensures that browser don't get auto reload our app
 
     if (form.prompt && form.photo) {
@@ -18,7 +18,7 @@ function CreatePost() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({...form})
+          body: JSON.stringify(form)
         })
 
         await response.json();
@@ -50,7 +50,7 @@ function CreatePost() {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            prompt: form.prompt
+            prompt: form.prompt,
           }),
         });
 
